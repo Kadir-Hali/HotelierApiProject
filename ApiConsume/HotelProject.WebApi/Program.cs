@@ -6,11 +6,12 @@ using HotelProject.DataAccessLayer.EntityFramework;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<Context>();
+
 
 builder.Services.AddScoped<IStaffDal, EfStaffDal>();
 builder.Services.AddScoped<IStaffService, StaffManager>();
 
+builder.Services.AddDbContext<Context>();
 // Add services to the container.
 
 builder.Services.AddControllers();

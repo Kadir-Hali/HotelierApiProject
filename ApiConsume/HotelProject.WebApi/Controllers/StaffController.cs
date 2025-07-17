@@ -1,4 +1,5 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
+using HotelProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,8 +24,9 @@ namespace HotelProject.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStaff()
+        public IActionResult AddStaff(Staff staff)
         {
+            _staffService.TInsert(staff);
             return Ok();
         }
 
