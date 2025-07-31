@@ -11,7 +11,9 @@ namespace HotelProject.WebApi.Mapping
             CreateMap<RoomAddDto, Room>();
             CreateMap<Room, RoomAddDto>();
 
-            CreateMap<UpdateRoomDto, Room>().ReverseMap();
+            CreateMap<UpdateRoomDto, Room>();
+            CreateMap<Room, UpdateRoomDto>();
+
         }
     }
 }
