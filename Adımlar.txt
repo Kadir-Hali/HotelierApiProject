@@ -1,1 +1,3 @@
 ApiTesti Ve Swagger
+Tema ekleme
+Register - Login
